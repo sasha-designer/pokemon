@@ -28,7 +28,9 @@ export const fetchMultiplePokemonById = createAsyncThunk(
     }
 
 
-      return pokemonDatas = await Promise.all(numberArray.map(el => 
+    //   return pokemonDatas = await Promise.all(numberArray.map((el) => 
+        // pokemonDatas = 지우니까 데이터가 잘 넘어옴
+        return await Promise.all(numberArray.map((el) => 
         fetchAPI(el)))  // Promise.all()을 이용하여 비동기 함수를 동기적으로 실행한다.
 
 
