@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <h1 className='text-[40px] text-center'>a</h1>
+      <h1 className='text-[40px] text-center'>포케몬 도감</h1>
     </>
   )
 }
