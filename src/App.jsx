@@ -26,11 +26,13 @@ function App() {
   return (
     <>
       <h1 className='text-[40px] text-center'>포케몬 도감</h1>
-      <nav className='flex gap-[10px] justify-center'>
+      <nav className='flex gap-[20px] justify-center'>
         <Link to='/'>메인</Link>
-        <Link to='/detail/1'>상세정보</Link>
-        <Link to='/search'>검색</Link>
+        {/* <Link to='/detail/1'>상세정보</Link> */}
+        {/* <Link to='/search'>검색</Link> */}
         <Link to='/favorite'>찜목록</Link>
+        <input className='w-[120px] border-b border-[darkgray]' type="text" />
+        <span>🔍</span>
       </nav>
       <main className='flex flex-wrap gap-[20px] justify-center pt-[20px]'>
         <Routes>
