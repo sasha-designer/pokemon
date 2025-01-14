@@ -32,7 +32,7 @@ export const pokemonSlice = createSlice({
 
 
 
-const favoriteSlice = createSlice({
+export const favoriteSlice = createSlice({
     name: 'favorite',
     initialState:[1, 2, 3],
     reducers: {
