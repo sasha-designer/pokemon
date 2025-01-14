@@ -10,5 +10,5 @@ export const selectPokemonById = (pokemonId) =>
 
 export const selectPokemonByRegExp = (reg) => createSelector(
     state => state.pokemon.data,
-    (pokemon) => pokemon.filter(el => reg.name.match(reg))
+    (pokemon) => pokemon.filter(el => el.name.match(reg))
 )
