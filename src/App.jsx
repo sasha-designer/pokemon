@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMultiplePokemonById } from './RTK/thunk'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Main from './pages/Main'
 import Detail from './pages/Detail'
 import Search from './pages/Search'
@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom'
 
 function App() {
 
+  const navigate = useNavigate()
 
   const dispatch = useDispatch()
 
@@ -31,7 +32,7 @@ function App() {
         {/* <Link to='/detail/1'>상세정보</Link> */}
         {/* <Link to='/search'>검색</Link> */}
         <Link to='/favorite'>찜목록</Link>
-        <input className='w-[120px] border-b border-[darkgray]' type="text" />
+        <input onChange={(e) => navigate(`/search?pokemon=${e.target.value}`)} className='w-[120px] border-b border-[darkgray]' type="text" />
         <span>🔍</span>
       </nav>
       <main className='flex flex-wrap gap-[20px] justify-center pt-[20px]'>
