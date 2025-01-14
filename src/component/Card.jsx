@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import FavoriteButton from "./FavoriteButton"
-import { useState } from "react"
+import { memo, useState } from "react"
 
 
 const CardContainer = styled.section`
@@ -23,7 +23,8 @@ const CardContainer = styled.section`
     }
 
 `
-export const Card = ({pokemon}) => {
+export const Card = memo( ({pokemon}) => {
+    // console.log('card', pokemon.id)
     const [isImageLoading, setIsImageLoading] = useState(true)
     const navigate = useNavigate()
     return (
@@ -36,4 +37,4 @@ export const Card = ({pokemon}) => {
             </CardContainer>
                 
     )
-}
+})
