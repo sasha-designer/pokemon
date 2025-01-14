@@ -28,7 +28,7 @@ export default function FlipCard({front, back}) {
     const [flipped, setFlipped] = useState(false)
     return (
         <>
-        <FlipImageContainer flipped={flipped}>
+        <FlipImageContainer flipped={flipped ?'flip':''}>
             <FrontImage src={front}></FrontImage>
             <BackImage src={back}></BackImage>
         </FlipImageContainer>
